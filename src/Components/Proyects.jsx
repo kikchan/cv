@@ -1,12 +1,12 @@
 import { Description } from "./Description";
 
-export const Proyects = ({ proyects }) => {
+export const Proyects = ({ proyects, proyectsLabel }) => {
   return (
     <section className="proyects-experience section" id="proyects">
-      <h2 className="section-title">Proyectos</h2>
+      <h2 className="section-title">{proyectsLabel}</h2>
       <div className="experience__container bd-grid">
         {proyects.map((proyect) => (
-          <Proyect key={proyect.company} {...proyect} />
+          <Proyect key={proyect.name} {...proyect} />
         ))}
       </div>
     </section>

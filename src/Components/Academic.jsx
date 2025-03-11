@@ -1,10 +1,10 @@
-export const Academic = ({ academic }) => {
+export const Academic = ({ academic, academicLabel }) => {
   return (
     <section className="academic-experience section" id="education">
-      <h2 className="section-title">Educación</h2>
+      <h2 className="section-title">{academicLabel}</h2>
       <div className="education__container bd-grid">
         {academic.map((academy) => (
-          <Academy key={academy.institution} {...academy} />
+          <Academy key={academy.career} {...academy} />
         ))}
       </div>
     </section>

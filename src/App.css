@@ -313,7 +313,7 @@ button.generate__btn {
 }
 
 .home__contact {
-  grid-template-columns: repeat(4, max-content);
+  grid-template-columns: repeat(5, max-content);
   justify-content: center;
 }
 

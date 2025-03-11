@@ -1,9 +1,9 @@
 import { Description } from "./Description";
 
-export const Works = ({ works }) => {
+export const Works = ({ works, worksLabel }) => {
   return (
     <section className="work-experience section" id="experience">
-      <h2 className="section-title">Experiencia</h2>
+      <h2 className="section-title">{worksLabel}</h2>
       <div className="experience__container bd-grid">
         {works.map((work) => (
           <Work key={work.company} {...work} />
@@ -13,7 +13,7 @@ export const Works = ({ works }) => {
   );
 };
 
-const Work = ({ title, period, company, description }) => {
+const Work = ({ title, period, company, tasksLabel, description, technologies, technologiesLabel }) => {
   return (
     <div className="experience__content">
       <div className="experience__time">
@@ -25,7 +25,11 @@ const Work = ({ title, period, company, description }) => {
         <span className="experience__company">
           {period} | {company}
         </span>
+        <h3 className="experience__label">{tasksLabel}</h3>
         {description.map((desc, i) => <Description key={i} desc={desc} />)}
+
+        <h3 className="experience__label">{technologiesLabel}</h3>
+        {technologies.map((tech, i) => <Description key={i} desc={tech} />)}
       </div>
     </div>
   );

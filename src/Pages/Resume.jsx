@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Profile } from "../Components/Profile";
 import { Academic } from "../Components/Academic";
 import { Skills } from "../Components/Skills";
+import { Languages } from "../Components/Languages";
 import { Proyects } from "../Components/Proyects";
 import { Works } from "../Components/Works";
 import { AboutMe } from "../Components/AboutMe";
@@ -23,7 +24,7 @@ export const Resume = () => {
     return () => media.removeEventListener('change', listener);
   }, [matches]);
 
-  const { profile, aboutMe, skills, socialMedia, experience } = dataSchema;
+  const { profile, aboutMe, skills, languages, socialMedia, experience } = dataSchema;
   return (
     <>
       <SEO  {...profile} {...aboutMe} />
@@ -34,6 +35,7 @@ export const Resume = () => {
             <Profile {...profile} {...socialMedia} isMobileView={!matches} />
             <AboutMe {...aboutMe} />
             <Skills {...skills} />
+            <Languages {...languages} />
           </div>
           <div className='resume__right'>
             <Works {...experience} />
