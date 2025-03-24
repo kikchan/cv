@@ -2,9 +2,7 @@ export const Data = {
   profile: {
     name: "Kiril Gaydarov",
     ocupation: "Backend Developer and DevOps",
-    location: "Benidorm, Spain",
     email: "kirilgaydarov94@gmail.com",
-    telephone: "+34 622698219",
     image: "images/me.jpg",
     resume: "Download resume",
     url: "/cv/CV Kiril EN 2025.pdf"
